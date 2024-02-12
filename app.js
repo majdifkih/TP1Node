@@ -1,12 +1,11 @@
 const express = require('express');
 //create instance of express
-const app = express();
-const users =require('./routes/user');
+const app = express(); 
 const posts =require('./routes/post');
-
-app.use("/user", users);
+const auth =require('./routes/auth');
 
 app.use('/',posts)
+app.use('/auth',auth)
 
 
 
